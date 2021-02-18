@@ -6,7 +6,8 @@
   <!--<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>-->
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
-  <script src="https://rawgit.com/Ctrl-Alt-Zen/aframe-mobile-controls/master/components/twoway-motion/twoway-motion.js"></script>
+  <script
+    src="https://rawgit.com/Ctrl-Alt-Zen/aframe-mobile-controls/master/components/twoway-motion/twoway-motion.js"></script>
   <title>WebVR A-frame</title>
 
   <script>
@@ -44,24 +45,26 @@
     <!-- <a-sky src="#a1c7e8"></a-sky> -->
     <a-sky material="color:#ffffff; src:#panorama" rotation="0 90 0"></a-sky>
 
-    <a-entity id="Environment" rotation="0 -166.64133696702916 0" scale="0.5 0.5 0.5" position="98.60636 -55.22105 119.6681">
+    <a-entity id="Environment" rotation="0 -166.64133696702916 0" scale="0.5 0.5 0.5"
+      position="98.60636 -55.22105 119.6681">
       <!--gltf모델 불러오기-->
       <a-gltf-model src="environment/scene.gltf" scale=".5 .5 .5"></a-gltf-model>
-  </a-entity>
+    </a-entity>
 
-  <a-entity id="Environment2" rotation="0 47.707330811568 0" scale="2 2 2" position="-36.197 -3 0">
+    <a-entity id="Environment2" rotation="0 47.707330811568 0" scale="2 2 2" position="-36.197 -3 0">
       <!--넷스트림 부스 glb모델 불러오기-->
       <a-gltf-model src="environment/booth.glb" scale="1 1 1" rotation="90 0 0"></a-gltf-model>
-  </a-entity>
+    </a-entity>
 
     <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow change-color-on-click=""></a-box>
     <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow change-color-on-click=""></a-sphere>
     <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
     <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
 
-    <a-camera movement-controls="fly: true" twoway-motion="speed: 35">
+    <a-camera movement-controls="fly: false" twoway-motion="speed: 35">
       <a-cursor geometry="primitive: ring" material="color: #FFC0CB;    shader: flat"></a-cursor>
     </a-camera>
   </a-scene>
 </body>
+
 </html>
