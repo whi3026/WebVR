@@ -6,6 +6,7 @@
   <!--<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>-->
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
+  <script src="https://rawgit.com/Ctrl-Alt-Zen/aframe-mobile-controls/master/components/twoway-motion/twoway-motion.js"></script>
   <title>WebVR A-frame</title>
 
   <script>
@@ -42,7 +43,7 @@
     <!--스카이박스-->
     <!-- <a-sky src="#a1c7e8"></a-sky> -->
     <a-sky material="color:#ffffff; src:#panorama" rotation="0 90 0"></a-sky>
-    
+
     <a-entity id="Environment" rotation="0 -166.64133696702916 0" scale="0.5 0.5 0.5" position="98.60636 -55.22105 119.6681">
       <!--gltf모델 불러오기-->
       <a-gltf-model src="environment/scene.gltf" scale=".5 .5 .5"></a-gltf-model>
@@ -62,7 +63,7 @@
       <a-entity camera position="0 1.6 0" look-controls></a-entity>
     </a-entity>
 
-    <a-camera tilt-turn="criticalAngle: 14">
+    <a-camera tilt-turn="criticalAngle: 14" twoway-motion="speed: 35">
       <a-cursor geometry="primitive: ring" material="color: #FFC0CB;    shader: flat"></a-cursor>
     </a-camera>
   </a-scene>
