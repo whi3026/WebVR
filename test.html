@@ -60,12 +60,10 @@
     <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
 
     <a-entity movement-controls="fly: true">
-      <a-entity camera position="0 1.6 0" look-controls></a-entity>
-    </a-entity>
-
-    <a-camera tilt-turn="criticalAngle: 14" twoway-motion="speed: 35">
+      <a-entity camera position="0 1.6 0" look-controls tilt-turn="criticalAngle: 14" twoway-motion="speed: 35"></a-entity>
       <a-cursor geometry="primitive: ring" material="color: #FFC0CB;    shader: flat"></a-cursor>
-    </a-camera>
+    </a-entity>
+    
   </a-scene>
 </body>
 </html>
