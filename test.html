@@ -1,21 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Test for WebVR</title>
-    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
 
-      <a-entity movement-controls="fly: true">
-        <a-entity camera position="0 1.6 0" look-controls></a-entity>
-      </a-entity>
-    </a-scene>
-  </body>
+<head>
+  <title>Test for WebVR</title>
+  <!--<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>-->
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
+  <title>WebVR A-frame</title>
+
+  <script>
+    AFRAME.registerComponent('change-color-on-click', {
+      // 클릭 시 오브젝트 색깔 바꾸기
+      init: function () {
+        var COLORS = [
+          'pink',
+          'blue',
+          'yellow',
+          'red',
+          'peachpuff',
+          '#2EAFAC',
+          '#BAE'];
+        this.el.addEventListener('click', function (evt) {
+          // math.floor - 주어진 숫자와 같거나 작은 정수 중에서 가장 큰 수를 반환
+          var randomIndex = Math.floor(Math.random() * COLORS.length);
+          var newColor = COLORS[randomIndex];
+          // setAttribute(name, value)
+          this.setAttribute('material', 'color', newColor);
+          console.log('I was clicked at: ', evt.detail.intersection.point, "and my new color is: ", newColor);
+        });
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <a-scene vr-mode-ui="false" device-orientation-permission-ui="enabled : false">
+    <!--에셋저장-->
+    <a-asset>
+      <img id="panorama" src="img/panorama.jpg" />
+    </a-asset>
+    <!--스카이박스-->
+    <!-- <a-sky src="#a1c7e8"></a-sky> -->
+    <a-sky material="color:#ffffff; src:#panorama" rotation="0 90 0"></a-sky>
+
+    <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow change-color-on-click=""></a-box>
+    <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow change-color-on-click=""></a-sphere>
+    <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
+
+    <a-entity movement-controls="fly: true">
+      <a-entity camera position="0 1.6 0" look-controls></a-entity>
+    </a-entity>
+
+    <a-camera tilt-turn="criticalAngle: 14">
+      <a-cursor geometry="primitive: ring" material="color: #FFC0CB;    shader: flat"></a-cursor>
+    </a-camera>
+  </a-scene>
+</body>
 </html>
