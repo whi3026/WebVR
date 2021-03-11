@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Booth 6ea</title>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@master/dist/aframe-master.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras@3.3.0/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="BaseFloor" src="BaseFloor_export_gltf/BaseFloor.gltf"></a-asset-item>
+        <a-asset-item id="Stand01" src="Stand01_export_gltf/Stand01.gltf"></a-asset-item>
+        <a-asset-item id="Stand02" src="Stand02_export_gltf/Stand02.gltf"></a-asset-item>
+        <a-asset-item id="Stand03" src="Stand03_export_gltf/Stand03.gltf"></a-asset-item>
+        <a-asset-item id="Stand04" src="Stand04_export_gltf/Stand04.gltf"></a-asset-item>
+        <a-asset-item id="Stand05" src="Stand05_export_gltf/Stand05.gltf"></a-asset-item>
+        <a-asset-item id="Stand06" src="Stand06_export_gltf/Stand06.gltf"></a-asset-item>
+        <a-asset-item id="Stand07" src="Stand07_export_gltf/Stand07.gltf"></a-asset-item>
+      </a-assets>
+      <a-assets>
+        <img id="sky" src="image/sky.png"></img>
+      </a-assets>
+      <a-sky src="#sky"></a-sky>
+      <a-entity id="BaseFloor1">
+        <a-gltf-model src="#BaseFloor" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Stand011">
+        <a-gltf-model src="#Stand01" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Stand021">
+        <a-gltf-model src="#Stand02" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Stand031">
+        <a-gltf-model src="#Stand03" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Stand041">
+        <a-gltf-model src="#Stand04" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Stand051">
+        <a-gltf-model src="#Stand05" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Stand061">
+        <a-gltf-model src="#Stand06" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Stand071">
+        <a-gltf-model src="#Stand07" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Directional Light" light="type: ambient; color:#FFFFFF; intensity: 1; " position="0 3 0"></a-entity>
+      <a-entity id="Spot Light" light="type: spot; color:#000BFF; intensity: 1; angle: 24" rotation="-90 180 0" position="10.321 5.35 -7.336"></a-entity>
+      <a-entity id="Spot Light (1)" light="type: spot; color:#19CE00; intensity: 0.5; angle: 6.4" rotation="-90 180 0" position="-7.172 2.984 -8.706"></a-entity>
+      <a-entity id="Spot Light (2)" light="type: spot; color:#19CE00; intensity: 0.5; angle: 6.4" rotation="-90 180 0" position="-7.906 2.984 -9.219"></a-entity>
+      <a-entity id="Spot Light (3)" light="type: spot; color:#19CE00; intensity: 0.5; angle: 6.4" rotation="-90 180 0" position="-7.172 2.984 -9.729"></a-entity>
+      <a-entity id="Spot Light (4)" light="type: spot; color:#E6D297; intensity: 1; angle: 12" rotation="-139.3501 180 0" position="0 2.18 2.85"></a-entity>
+      <a-entity id="Spot Light (5)" light="type: spot; color:#E6D297; intensity: 1; angle: 12" rotation="-139.35 360 0" position="0 2.18 -3.136"></a-entity>
+      <a-entity id="PlayerCamera" position="0 1.6 0">
+        <a-camera near="0.001" movement-controls="fly: false" wasd-controls="fly: false" position="0 0 0">
+          <a-cursor geometry="primitive: ring" material="color: #FFC0CB; shader: flat"></a-cursor>
+        </a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
