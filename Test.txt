@@ -1,1 +1,0 @@
-<a-scene vr-mode-ui="false" device-orientation-permission-ui="enabled : false"> /n <a-sky material = "color:#98E7D7" ></ a - sky > 

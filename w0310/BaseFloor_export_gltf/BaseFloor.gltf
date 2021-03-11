@@ -1,0 +1,1176 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3",
+      "max": [
+        1.5,
+        1.5,
+        0.0
+      ],
+      "min": [
+        -1.5,
+        -1.5,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3",
+      "max": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC4",
+      "max": [
+        -1.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC2",
+      "max": [
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC2",
+      "max": [
+        0.99242627620697021,
+        0.99242788553237915
+      ],
+      "min": [
+        0.0078125,
+        0.0078125
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5125,
+      "count": 6,
+      "type": "SCALAR",
+      "max": [
+        3.0
+      ],
+      "min": [
+        0.0
+      ]
+    }
+  ],
+  "asset": {
+    "generator": "Plattar UnityGLTF (2019.4.18f1)",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "BaseFloor.bin",
+      "byteLength": 248
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 48
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 48,
+      "byteLength": 48
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 96,
+      "byteLength": 64
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 160,
+      "byteLength": 32
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 192,
+      "byteLength": 32
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 224,
+      "byteLength": 24
+    }
+  ],
+  "images": [
+    {
+      "uri": "ConcreteFloorPaintedBare01_n.png",
+      "name": "ConcreteFloorPaintedBare01_n"
+    },
+    {
+      "uri": "ConcreteFloorPaintedBare01b_a.png",
+      "name": "ConcreteFloorPaintedBare01b_a"
+    },
+    {
+      "uri": "ConcreteFloorPaintedBare01_m.png",
+      "name": "ConcreteFloorPaintedBare01_m"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicFactor": 0.99,
+        "roughnessFactor": 0.92299997806549072,
+        "metallicRoughnessTexture": {
+          "index": 2
+        }
+      },
+      "normalTexture": {
+        "index": 0
+      },
+      "occlusionTexture": {
+        "index": 2
+      },
+      "name": "ConcreteFloorPaintedBare01b"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4
+          },
+          "indices": 5,
+          "material": 0
+        }
+      ],
+      "name": "BaseFloor01 (23)"
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "name": "BaseFloor"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -18.0,
+        0.0,
+        6.0
+      ],
+      "name": "BaseFloor01 (23)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -15.0,
+        0.0,
+        6.0
+      ],
+      "name": "BaseFloor01 (22)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -9.0,
+        0.0,
+        6.0
+      ],
+      "name": "BaseFloor01 (21)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -12.0,
+        0.0,
+        6.0
+      ],
+      "name": "BaseFloor01 (20)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -18.0,
+        0.0,
+        3.0
+      ],
+      "name": "BaseFloor01 (15)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -18.0,
+        0.0,
+        0.0
+      ],
+      "name": "BaseFloor01 (14)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -18.0,
+        0.0,
+        -3.0
+      ],
+      "name": "BaseFloor01 (13)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -18.0,
+        0.0,
+        -6.0
+      ],
+      "name": "BaseFloor01 (12)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -15.0,
+        0.0,
+        -6.0
+      ],
+      "name": "BaseFloor01 (11)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -9.0,
+        0.0,
+        -6.0
+      ],
+      "name": "BaseFloor01 (10)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -12.0,
+        0.0,
+        -6.0
+      ],
+      "name": "BaseFloor01 (2)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        6.0,
+        0.0,
+        6.0
+      ],
+      "name": "BaseFloor01 (24)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -6.0,
+        0.0,
+        6.0
+      ],
+      "name": "BaseFloor01 (23)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -3.0,
+        0.0,
+        6.0
+      ],
+      "name": "BaseFloor01 (22)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        3.0,
+        0.0,
+        6.0
+      ],
+      "name": "BaseFloor01 (21)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        6.0
+      ],
+      "name": "BaseFloor01 (20)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        6.0,
+        0.0,
+        3.0
+      ],
+      "name": "BaseFloor01 (19)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        6.0,
+        0.0,
+        0.0
+      ],
+      "name": "BaseFloor01 (18)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        6.0,
+        0.0,
+        -3.0
+      ],
+      "name": "BaseFloor01 (17)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        6.0,
+        0.0,
+        -6.0
+      ],
+      "name": "BaseFloor01 (16)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -6.0,
+        0.0,
+        3.0
+      ],
+      "name": "BaseFloor01 (15)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -6.0,
+        0.0,
+        0.0
+      ],
+      "name": "BaseFloor01 (14)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -6.0,
+        0.0,
+        -3.0
+      ],
+      "name": "BaseFloor01 (13)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -6.0,
+        0.0,
+        -6.0
+      ],
+      "name": "BaseFloor01 (12)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -3.0,
+        0.0,
+        -6.0
+      ],
+      "name": "BaseFloor01 (11)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        3.0,
+        0.0,
+        -6.0
+      ],
+      "name": "BaseFloor01 (10)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        -6.0
+      ],
+      "name": "BaseFloor01 (2)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        6.0,
+        0.0,
+        -9.0
+      ],
+      "name": "BaseFloor01 (25)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        6.0,
+        0.0,
+        -12.0
+      ],
+      "name": "BaseFloor01 (26)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -18.0,
+        0.0,
+        -15.0
+      ],
+      "name": "BaseFloor01 (28)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -15.0,
+        0.0,
+        -15.0
+      ],
+      "name": "BaseFloor01 (29)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -9.0,
+        0.0,
+        -15.0
+      ],
+      "name": "BaseFloor01 (30)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -12.0,
+        0.0,
+        -15.0
+      ],
+      "name": "BaseFloor01 (3)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        6.0,
+        0.0,
+        -15.0
+      ],
+      "name": "BaseFloor01 (31)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -6.0,
+        0.0,
+        -15.0
+      ],
+      "name": "BaseFloor01 (32)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -3.0,
+        0.0,
+        -15.0
+      ],
+      "name": "BaseFloor01 (33)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        3.0,
+        0.0,
+        -15.0
+      ],
+      "name": "BaseFloor01 (34)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        -15.0
+      ],
+      "name": "BaseFloor01 (4)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -18.0,
+        0.0,
+        -9.0
+      ],
+      "name": "BaseFloor01 (27)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -18.0,
+        0.0,
+        -12.0
+      ],
+      "name": "BaseFloor01 (35)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -3.0,
+        0.0,
+        -9.0
+      ],
+      "name": "BaseFloor01 (37)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -3.0,
+        0.0,
+        -12.0
+      ],
+      "name": "BaseFloor01 (38)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -12.0,
+        0.0,
+        -9.0
+      ],
+      "name": "BaseFloor01 (5)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -12.0,
+        0.0,
+        -12.0
+      ],
+      "name": "BaseFloor01 (6)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        9.0,
+        0.0,
+        6.0
+      ],
+      "name": "BaseFloor01 (36)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        12.0,
+        0.0,
+        6.0
+      ],
+      "name": "BaseFloor01 (39)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        15.0,
+        0.0,
+        6.0
+      ],
+      "name": "BaseFloor01 (40)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        15.0,
+        0.0,
+        3.0
+      ],
+      "name": "BaseFloor01 (41)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        15.0,
+        0.0,
+        0.0
+      ],
+      "name": "BaseFloor01 (42)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        15.0,
+        0.0,
+        -3.0
+      ],
+      "name": "BaseFloor01 (43)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        15.0,
+        0.0,
+        -6.0
+      ],
+      "name": "BaseFloor01 (44)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        15.0,
+        0.0,
+        -9.0
+      ],
+      "name": "BaseFloor01 (45)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        15.0,
+        0.0,
+        -12.0
+      ],
+      "name": "BaseFloor01 (46)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        15.0,
+        0.0,
+        -15.0
+      ],
+      "name": "BaseFloor01 (47)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        12.0,
+        0.0,
+        -15.0
+      ],
+      "name": "BaseFloor01 (48)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        9.0,
+        0.0,
+        -15.0
+      ],
+      "name": "BaseFloor01 (49)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        9.0,
+        0.0,
+        -3.0
+      ],
+      "name": "BaseFloor01 (50)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        12.0,
+        0.0,
+        -3.0
+      ],
+      "name": "BaseFloor01 (51)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        -0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        9.0,
+        0.0,
+        0.0
+      ],
+      "name": "BaseFloor01 (52)"
+    }
+  ],
+  "samplers": [
+    {
+      "minFilter": 9729
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "BaseFloor"
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "ConcreteFloorPaintedBare01_n"
+    },
+    {
+      "sampler": 0,
+      "source": 1,
+      "name": "ConcreteFloorPaintedBare01b_a"
+    },
+    {
+      "sampler": 0,
+      "source": 2,
+      "name": "ConcreteFloorPaintedBare01_m"
+    }
+  ]
+}

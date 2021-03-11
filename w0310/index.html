@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Booth 6ea</title>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@master/dist/aframe-master.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras@3.3.0/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="BaseFloor" src="BaseFloor_export_gltf/BaseFloor.gltf"></a-asset-item>
+        <a-asset-item id="Stand01" src="Stand01_export_gltf/Stand01.gltf"></a-asset-item>
+        <a-asset-item id="Stand02" src="Stand02_export_gltf/Stand02.gltf"></a-asset-item>
+        <a-asset-item id="Stand03" src="Stand03_export_gltf/Stand03.gltf"></a-asset-item>
+        <a-asset-item id="Stand04" src="Stand04_export_gltf/Stand04.gltf"></a-asset-item>
+        <a-asset-item id="Stand05" src="Stand05_export_gltf/Stand05.gltf"></a-asset-item>
+        <a-asset-item id="Stand06" src="Stand06_export_gltf/Stand06.gltf"></a-asset-item>
+        <a-asset-item id="Stand07" src="Stand07_export_gltf/Stand07.gltf"></a-asset-item>
+      </a-assets>
+      <a-assets>
+        <img id="sky" src="image/sky.png"></img>
+      </a-assets>
+      <a-sky src="#sky"></a-sky>
+      <a-entity id="BaseFloor1">
+        <a-gltf-model src="#BaseFloor" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Stand011">
+        <a-gltf-model src="#Stand01" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Stand021">
+        <a-gltf-model src="#Stand02" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Stand031">
+        <a-gltf-model src="#Stand03" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Stand041">
+        <a-gltf-model src="#Stand04" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Stand051">
+        <a-gltf-model src="#Stand05" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Stand061">
+        <a-gltf-model src="#Stand06" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Stand071">
+        <a-gltf-model src="#Stand07" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="PlayerCamera" position="0 1.6 0">
+        <a-camera near="0.001" movement-controls="fly: false" wasd-controls="fly: false" position="0 0 0">
+          <a-cursor geometry="primitive: ring" material="color: #FFC0CB; shader: flat"></a-cursor>
+        </a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
