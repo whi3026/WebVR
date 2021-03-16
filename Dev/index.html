@@ -1,0 +1,81 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  </meta>
+  <title>Interaction</title>
+  <script src="https://unpkg.com/aframe-extras@3.3.0/dist/aframe-extras.min.js"></script>
+  <script src="https://rawgit.com/aframevr/aframe/cf15c15/dist/aframe-master.min.js"></script>
+  <link rel='stylesheet' href='https://dev.mavo.io/dist/mavo.css'>
+  <link rel="stylesheet" href="./style.css">
+  <script src='https://dev.mavo.io/dist/mavo.js'></script>
+
+  <!--<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>-->
+
+</head>
+
+<body>
+  <div mv-app="aframe">
+    <aside>
+      <fieldset style="background-color:#ffffff";>
+        <legend>Cube</legend>
+        <label>
+          X: <input type="range" min="-10" max="10" step=".1" property="boxX" value="0"> [boxX]
+        </label>
+
+        <label>
+          Y: <input type="range" min="-10" max="10" step=".1" property="boxY" value="2"> [boxY]
+        </label>
+
+        <label>
+          Z: <input type="range" min="-10" max="10" step=".1" property="boxZ" value="-3"> [boxZ]
+        </label>
+
+        <label>
+          Rotation: <input type="range" min="0" max="360" property="boxRotation"
+            xvalue="[if(animateRotation, ($now * 30) / 1000 mod 360, 45)]"> [boxRotation]°
+        </label>
+        <!-- 			<label>
+            <input type="checkbox" property="animateRotation" checked /> Animate rotation?
+          </label> -->
+      </fieldset>
+      <small>
+        <!-- 			<strong>Note:</strong> Rotation slider is a bit funky in Firefox, due to bug <a href="https://github.com/mavoweb/mavo/issues/310">#310</a> -->
+        <div class="row">
+          <div class="align-center">
+            <p style="color: black; display: inline-block;">넷스트림 가상전시</p>
+            <p style="color: red; display: inline-block;"> 개발자 툴</p>
+            <p style="color: black; display: inline-block;"> 예제</p>
+          </div>
+        </div>
+      </small>
+    </aside>
+    <a-scene vr-mode-ui="false" device-orientation-permission-ui="enabled : false">
+    <!--<a-scene vr-mode-ui="false" device-orientation-permission-ui="enabled : false" stats background="color: #d1eaff">-->
+
+      <a-assets>
+        <a-asset-item id="plane" src="plane_export_gltf/plane.gltf"></a-asset-item>
+        <a-asset-item id="Int_Box" src="Int_Box_export_gltf/Int_Box.gltf"></a-asset-item>
+      </a-assets>
+      
+      <a-sky color="#b0d8d0"></a-sky>
+      
+      <a-entity id="plane1">
+        <a-gltf-model src="#plane" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Int_Box1">
+        <a-gltf-model src="#Int_Box" position="[boxX] [boxY] [boxZ]" rotation="0 [boxRotation] 0" scale="1 1 1" shadow>
+          <a-animation begin="mouseenter" attribute="scale" to="2 2 2" dur="1000"></a-animation>
+          <a-animation begin="mouseleave" attribute="scale" to="1 1 1" dur="1000"></a-animation>
+        </a-gltf-model>
+      </a-entity>
+      <a-entity id="PlayerCamera" position="0 1.6 0">
+        <a-camera near="0.001" movement-controls="fly: false" wasd-controls="fly: false" position="0 0 0">
+          <a-cursor geometry="primitive: ring" material="color: #FFC0CB; shader: flat"></a-cursor>
+        </a-camera>
+      </a-entity>
+    </a-scene>
+  </div>
+</body>
+
+</html>

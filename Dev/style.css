@@ -1,0 +1,30 @@
+aside {
+	position: absolute;
+	top: 0;
+	left: 1em;
+	z-index: 1;
+	width: 18em;
+}
+
+fieldset {
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius: .3em;
+	font-size: 150%;
+	margin-top: 1em;
+}
+
+	label {
+		display: grid;
+		grid-template-columns: 4em 1fr 4em;
+		grid-gap: 0 1em;
+		margin: .3em 0;
+	}
+
+input[type=range] {
+	width: 13em;
+	margin: 0 .3em;
+}
+
+body {
+	font: 100%/1.5 Helvetica Neue, sans-serif;
+}

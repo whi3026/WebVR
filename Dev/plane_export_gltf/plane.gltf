@@ -1,0 +1,762 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3",
+      "max": [
+        0.5,
+        0.5,
+        3.0616168005906746E-17
+      ],
+      "min": [
+        -0.5,
+        -0.5,
+        -3.0616168005906746E-17
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3",
+      "max": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "min": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "min": [
+        1.0,
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC2",
+      "max": [
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5125,
+      "count": 6,
+      "type": "SCALAR",
+      "max": [
+        3.0
+      ],
+      "min": [
+        0.0
+      ]
+    }
+  ],
+  "asset": {
+    "generator": "Plattar UnityGLTF (2019.4.18f1)",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "plane.bin",
+      "byteLength": 216
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 48
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 48,
+      "byteLength": 48
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 96,
+      "byteLength": 64
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 160,
+      "byteLength": 32
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 192,
+      "byteLength": 24
+    }
+  ],
+  "images": [
+    {
+      "uri": "quad.jpg",
+      "name": "quad"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.7756832,
+          0.67737633,
+          0.8113208,
+          1.0
+        ],
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.5
+      },
+      "name": "Quad"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        }
+      ],
+      "name": "Quad"
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "name": "plane"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "name": "Quad"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "name": "Quad (1)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        2.0,
+        0.0,
+        0.0
+      ],
+      "name": "Quad (2)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        3.0,
+        0.0,
+        0.0
+      ],
+      "name": "Quad (3)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "name": "Quad (4)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -2.0,
+        0.0,
+        0.0
+      ],
+      "name": "Quad (5)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "name": "Quad (6)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        1.0,
+        0.0,
+        -1.0
+      ],
+      "name": "Quad (7)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        2.0,
+        0.0,
+        -1.0
+      ],
+      "name": "Quad (8)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        3.0,
+        0.0,
+        -1.0
+      ],
+      "name": "Quad (9)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "name": "Quad (10)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -2.0,
+        0.0,
+        -1.0
+      ],
+      "name": "Quad (11)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "name": "Quad (12)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        1.0,
+        0.0,
+        -2.0
+      ],
+      "name": "Quad (13)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        2.0,
+        0.0,
+        -2.0
+      ],
+      "name": "Quad (14)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        3.0,
+        0.0,
+        -2.0
+      ],
+      "name": "Quad (15)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -1.0,
+        0.0,
+        -2.0
+      ],
+      "name": "Quad (16)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -2.0,
+        0.0,
+        -2.0
+      ],
+      "name": "Quad (17)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        -3.0
+      ],
+      "name": "Quad (18)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        1.0,
+        0.0,
+        -3.0
+      ],
+      "name": "Quad (19)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        2.0,
+        0.0,
+        -3.0
+      ],
+      "name": "Quad (20)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        3.0,
+        0.0,
+        -3.0
+      ],
+      "name": "Quad (21)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -1.0,
+        0.0,
+        -3.0
+      ],
+      "name": "Quad (22)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -2.0,
+        0.0,
+        -3.0
+      ],
+      "name": "Quad (23)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Quad (24)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "name": "Quad (25)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        2.0,
+        0.0,
+        1.0
+      ],
+      "name": "Quad (26)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        3.0,
+        0.0,
+        1.0
+      ],
+      "name": "Quad (27)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "name": "Quad (28)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -2.0,
+        0.0,
+        1.0
+      ],
+      "name": "Quad (29)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        2.0
+      ],
+      "name": "Quad (30)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        1.0,
+        0.0,
+        2.0
+      ],
+      "name": "Quad (31)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        2.0,
+        0.0,
+        2.0
+      ],
+      "name": "Quad (32)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        3.0,
+        0.0,
+        2.0
+      ],
+      "name": "Quad (33)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -1.0,
+        0.0,
+        2.0
+      ],
+      "name": "Quad (34)"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.7071068,
+        0.0,
+        0.0,
+        -0.7071068
+      ],
+      "translation": [
+        -2.0,
+        0.0,
+        2.0
+      ],
+      "name": "Quad (35)"
+    }
+  ],
+  "samplers": [
+    {
+      "minFilter": 9729
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "plane"
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "quad"
+    }
+  ]
+}
