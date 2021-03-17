@@ -1,0 +1,406 @@
+<html>
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>NetStreamModel</title>
+    <script src="https://unpkg.com/aframe-extras@3.3.0/dist/aframe-extras.min.js"></script>
+    <script src="https://rawgit.com/aframevr/aframe/cf15c15/dist/aframe-master.min.js"></script>
+    <script>
+      AFRAME.registerComponent('play-pause', {
+        init: function () {
+          var myVideo = document.querySelector('#netStream');
+          var videoControls = document.querySelector('#videoControls');
+          this.el.addEventListener('click', function () {
+            if (myVideo.paused) {
+              myVideo.play();
+              videoControls.setAttribute('src', '#pause');
+            } else {
+              myVideo.pause();
+              videoControls.setAttribute('src', '#play');
+            }
+          });
+        }
+      });
+    </script>
+
+<link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://startbootstrap.com/templates/agency/font-awesome-4.1.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+
+  </head>
+  <body>
+    <a-scene renderer="gammaOutput: true; colorManagement: true;" vr-mode-ui="enabled: false">
+      <a-assets>
+        <a-asset-item id="NetStream_Booth" src="NetStream_Booth_export_gltf/NetStream_Booth.gltf"></a-asset-item>
+        <img id="play" src="image/play.png">
+      <img id="pause" src="image/pause.png">
+      <video id="netStream" src="image/NetStream.mp4" loop="true"></video>
+      </a-assets>
+      <a-assets>
+        <img id="sky" src="image/sky.png"></img>
+      </a-assets>
+      <a-sky src="#sky"></a-sky>
+
+      <a-video src="#netStream" width="3" height="1.6" rotation="0 180 0" position="0 1.8 2.5" scale="1 1 1">
+        <!-- Play/Pause -->
+        <a-image id="videoControls" src="#play" position="0 -1.2 0" scale="0.5 0.5 1" play-pause>
+        </a-image>
+      </a-video>
+
+      <a-entity id="NetStream_Booth1">
+        <a-gltf-model src="#NetStream_Booth" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+      <a-entity id="Area Light (1)" light="type: spot; color:#FFF1A4; intensity: 20; angle: 33.2" rotation="-112.4102 360 180" position="-2.60735 -1.684057 6.218771"></a-entity>
+      <a-entity id="Area Light" light="type: spot; color:#FFF1A4; intensity: 20; angle: 33.2" rotation="-112.4102 360 180" position="3.31765 -1.672357 6.026771"></a-entity>
+      <a-entity id="Point Light (2)" light="type: point; color:#FFFFFF; intensity: 0.8; " position="-9.66735 -0.8395572 2.011671"></a-entity>
+      <a-entity id="Point Light (1)" light="type: point; color:#FFFFFF; intensity: 0.8; " position="8.46265 -0.8395572 2.011671"></a-entity>
+      <a-entity id="Point Light" light="type: point; color:#FFFFFF; intensity: 0.5; " position="0.2126498 -1.561557 2.011671"></a-entity>
+      <a-entity id="Directional Light" light="type: ambient; color:#FFF4D6; intensity: 1; " position="0 43.7 -40.1"></a-entity>
+      <a-entity id="Directional Light (1)" light="type: ambient; color:#FFF4D6; intensity: 0.3; " position="0 43.7 -40.1"></a-entity>
+      <a-entity id="Directional Light (2)" light="type: ambient; color:#FFF4D6; intensity: 0.3; " position="0 43.7 -40.1"></a-entity>
+      <a-entity id="Directional Light (3)" light="type: ambient; color:#FFF4D6; intensity: 0.3; " position="0 43.7 -40.1"></a-entity>
+      <a-entity id="Spot Light" light="type: spot; color:#FFFFFF; intensity: 1; angle: 12" rotation="-155.9952 360 180" position="0.413 -1.665 -3.126"></a-entity>
+      <a-entity id="PlayerCamera" position="0 1.8 -9" rotation="0 180 0">
+        <a-camera near="0.001" movement-controls="fly: false" wasd-controls="fly: false" position="0 0 0">
+          <a-cursor geometry="primitive: ring" material="color: #FFC0CB; shader: flat"></a-cursor>
+          <a-entity id="direc" light="type: directional; intensity: 0.5;" position="0 8 0"></a-entity>
+        </a-camera>
+      </a-entity>
+    </a-scene>
+    <body id="page-top" class="index" data-pinterest-extension-installed="cr1.3.4">
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+          <div class="container">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header page-scroll">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand page-scroll" href="#page-top">NetStream VR Exhibition</a>
+              </div>
+  
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li class="hidden active">
+                          <a href="#page-top"></a>
+                      </li>
+                      <li class="">
+                          <a class="page-scroll" href="#services">Services</a>
+                      </li>
+                      <li class="">
+                          <a class="page-scroll" href="#portfolio">Portfolio</a>
+                      </li>
+                      <li class="">
+                          <a class="page-scroll" href="#about">About</a>
+                      </li>
+                      <li class="">
+                          <a class="page-scroll" href="#team">Team</a>
+                      </li>
+                      <li class="">
+                          <a class="page-scroll" href="#contact">Contact</a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container-fluid -->
+      </nav>
+  
+      <!-- Header -->
+      <header>
+          <div class="container">
+              <div class="intro-text">
+                  <div class="intro-lead-in">Hello Errbody</div>
+                  <div class="intro-heading">Yes Mel, Ajmal, Chien, Junne maybe and Syok.</div>
+                  <a href="#services" class="page-scroll btn btn-xl">Aku Bukan Sempit</a>
+              </div>
+          </div>
+      </header>
+  
+      <!-- Services Section -->
+      <section id="services">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 text-center">
+                      <h2 class="section-heading">Services</h2>
+                      <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                  </div>
+              </div>
+              <div class="row text-center">
+                  <div class="col-md-4">
+                      <span class="fa-stack fa-4x">
+                          <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                          <i class="glyphicon glyphicon-tree-conifer"></i>
+                      </span>
+                      <h4 class="service-heading">Here is a pokok</h4>
+                      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                  </div>
+                  <div class="col-md-4">
+                      <span class="fa-stack fa-4x">
+                          <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                          <i class="glyphicon glyphicon-heart"></i>
+                      </span>
+                      <h4 class="service-heading">Here's a heart</h4>
+                      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                  </div>
+                  <div class="col-md-4">
+                      <span class="fa-stack fa-4x">
+                          <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                          <i class="glyphicon glyphicon-tint"></i>
+                      </span>
+                      <h4 class="service-heading">Waterfall maybe?</h4>
+                      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <!-- Portfolio Grid Section -->
+      <section id="portfolio" class="bg-light-gray">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 text-center">
+                      <h2 class="section-heading">Portfolio</h2>
+                      <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-4 col-sm-6 portfolio-item">
+                      <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content">
+                                  <i class="fa fa-plus fa-3x"></i>
+                              </div>
+                          </div>
+                          <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
+                      </a>
+                      <div class="portfolio-caption">
+                          <h4>Round Icons</h4>
+                          <p class="text-muted">Graphic Design</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6 portfolio-item">
+                      <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content">
+                                  <i class="fa fa-plus fa-3x"></i>
+                              </div>
+                          </div>
+                          <img src="https://unsplash.imgix.net/44/9s1lvXLlSbCX5l3ZaYWP_hdr-1.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=f0a1db79752dbb04ec6d2aab7d17c7b0" class="img-responsive" alt="">
+                      </a>
+                      <div class="portfolio-caption">
+                          <h4>Startup Framework</h4>
+                          <p class="text-muted">Website Design</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6 portfolio-item">
+                      <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content">
+                                  <i class="fa fa-plus fa-3x"></i>
+                              </div>
+                          </div>
+                          <img src="https://unsplash.imgix.net/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=6518e4df89659818f6c0392175a9c5e6" class="img-responsive" alt="">
+                      </a>
+                      <div class="portfolio-caption">
+                          <h4>Treehouse</h4>
+                          <p class="text-muted">Website Design</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6 portfolio-item">
+                      <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content">
+                                  <i class="fa fa-plus fa-3x"></i>
+                              </div>
+                          </div>
+                          <img src="https://unsplash.imgix.net/44/9s1lvXLlSbCX5l3ZaYWP_hdr-1.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=f0a1db79752dbb04ec6d2aab7d17c7b0" class="img-responsive" alt="">
+                      </a>
+                      <div class="portfolio-caption">
+                          <h4>Golden</h4>
+                          <p class="text-muted">Website Design</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6 portfolio-item">
+                      <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content">
+                                  <i class="fa fa-plus fa-3x"></i>
+                              </div>
+                          </div>
+                          <img src="https://unsplash.imgix.net/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=6518e4df89659818f6c0392175a9c5e6" class="img-responsive" alt="">
+                      </a>
+                      <div class="portfolio-caption">
+                          <h4>Escape</h4>
+                          <p class="text-muted">Website Design</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6 portfolio-item">
+                      <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content">
+                                  <i class="fa fa-plus fa-3x"></i>
+                              </div>
+                          </div>
+                          <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
+                      </a>
+                      <div class="portfolio-caption">
+                          <h4>Dreams</h4>
+                          <p class="text-muted">Website Design</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <!-- About Section -->
+      <section id="about">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 text-center">
+                      <h2 class="section-heading">About</h2>
+                      <h3 class="section-subheading text-muted">Ajmal, I need help to learn how to tweak this part. I don't want this timeline crap. Haha.</h3>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-12">
+                      <ul class="timeline">
+                          <li>
+                              <div class="timeline-image">
+                                  <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                      <h4>2009-2011</h4>
+                                      <h4 class="subheading">Our Humble Beginnings</h4>
+                                  </div>
+                                  <div class="timeline-body">
+                                      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="timeline-inverted">
+                              <div class="timeline-image">
+                                  <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                      <h4>March 2011</h4>
+                                      <h4 class="subheading">An Agency is Born</h4>
+                                  </div>
+                                  <div class="timeline-body">
+                                      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="timeline-image">
+                                  <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                      <h4>December 2012</h4>
+                                      <h4 class="subheading">Transition to Full Service</h4>
+                                  </div>
+                                  <div class="timeline-body">
+                                      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="timeline-inverted">
+                              <div class="timeline-image">
+                                  <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                      <h4>July 2014</h4>
+                                      <h4 class="subheading">Phase Two Expansion</h4>
+                                  </div>
+                                  <div class="timeline-body">
+                                      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="timeline-inverted">
+                              <div class="timeline-image">
+                                  <h4>Be Part
+                                      <br>Of Our
+                                      <br>Story!</h4>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <!-- Team Section -->
+      <section id="team" class="bg-light-gray">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 text-center">
+                      <h2 class="section-heading">Our Amazing Team</h2>
+                      <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-4">
+                      <div class="team-member">
+                          <img src="http://www.mycatspace.com/wp-content/uploads/2013/08/adopting-a-cat.jpg" class="img-responsive img-circle" alt="">
+                          <h4>Kay Garland</h4>
+                          <p class="text-muted">Lead Designer</p>
+                          <ul class="list-inline social-buttons">
+                              <li><a href="#"><i class="fa fa-twitter"></i></a>
+                              </li>
+                              <li><a href="#"><i class="fa fa-facebook"></i></a>
+                              </li>
+                              <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-sm-4">
+                      <div class="team-member">
+                          <img src="http://www.mycatspace.com/wp-content/uploads/2013/08/adopting-a-cat.jpg" class="img-responsive img-circle" alt="">
+                          <h4>Larry Parker</h4>
+                          <p class="text-muted">Lead Marketer</p>
+                          <ul class="list-inline social-buttons">
+                              <li><a href="#"><i class="fa fa-twitter"></i></a>
+                              </li>
+                              <li><a href="#"><i class="fa fa-facebook"></i></a>
+                              </li>
+                              <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-sm-4">
+                      <div class="team-member">
+                          <img src="http://www.mycatspace.com/wp-content/uploads/2013/08/adopting-a-cat.jpg" class="img-responsive img-circle" alt="">
+                          <h4>Diana Pertersen</h4>
+                          <p class="text-muted">Lead Developer</p>
+                          <ul class="list-inline social-buttons">
+                              <li><a href="#"><i class="fa fa-twitter"></i></a>
+                              </li>
+                              <li><a href="#"><i class="fa fa-facebook"></i></a>
+                              </li>
+                              <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-8 col-lg-offset-2 text-center">
+                      <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+  </body>
+</html>
