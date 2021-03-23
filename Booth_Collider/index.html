@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   </meta>
+   <title>ThePict Model</title>
+   <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+   <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
+   <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+   <script>
+      AFRAME.registerComponent('collision', {
+         init: function () {
+            this.el.addEventListener('collide', function (e) {
+               console.log('Player has collided with ', e.detail.body.el);
+               e.detail.target.el; // Original entity (playerEl).
+               e.detail.body.el; // Other entity, which playerEl touched.
+               e.detail.contact; // Stats about the collision (CANNON.ContactEquation).
+               e.detail.contact.ni; // Normal (direction) of the collision (CANNON.Vec3).
+            });
+         }
+      })
+   </script>
+</head>
+
+<body>
+   <a-scene renderer="colorManagement: true;" physics="debug: true">
+      <a-assets>
+         <a-asset-item id="Basic_Booth" src="Basic_Booth_export_gltf/Basic_Booth.gltf"></a-asset-item>
+      </a-assets>
+      <a-assets>
+         <img id="sky" src="image/sky.png"></img>
+      </a-assets>
+
+      <a-sky src="#sky"></a-sky>
+
+      <a-entity id="Basic_Booth1">
+         <a-gltf-model src="#Basic_Booth" position="0 0.17 0" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+      </a-entity>
+
+      <a-entity id="Directional Light" light="type: directional;
+            color:#FFFFFF;
+            intensity: 1;
+            " position="0 15 0"></a-entity>
+
+      <a-entity id="Point Light" light="type: point;
+            color:#FFFFFF;
+            intensity: 1;
+            " position="0 2.91 0"></a-entity>
+
+      <a-entity id="collider" scale="1.5 1.5 1.5" rotation="0 180 0" visible="false">
+         <a-box static-body position="0 0 -3" color="#f55f5f" width="6" height="5" depth="0.1"></a-box>
+         <a-box static-body position="3 0 0" rotation="0 90 0" color="#f55f5f" width="6" height="5" depth="0.1"></a-box>
+         <a-box static-body position="-3 0 0" rotation="0 90 0" color="#f55f5f" width="6" height="5" depth="0.1"></a-box>
+      </a-entity>
+      <a-entity id="Ambient Light" light="type: ambient; intensity: 1;" position="0 8 0"></a-entity>
+
+      <a-plane static-body rotation="-90 0 0" position="0 0 -4" width="100" height="100" color="#7BC8A4"></a-plane>
+
+      <!-- <a-entity id="PlayerCamera" position="0 1.8 10" rotation="0 0 0">
+         <a-camera id="camera" near="0.001" movement-controls="fly: false" wasd-controls="fly: false" position="0 0 0"
+            kinematic-body collision>
+            <a-cursor geometry="primitive: ring" material="color: #FFC0CB; shader: flat"></a-cursor>
+         </a-camera>
+      </a-entity> -->
+
+      <a-entity id="camera" position="0 1.6 0">
+         <!-- Camera Entity -->
+         <a-entity id="camera" camera look-controls wasd-controls kinematic-body collision>
+         </a-entity>
+     </a-entity>
+
+   </a-scene>
+</body>
+
+</html>

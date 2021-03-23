@@ -21,7 +21,9 @@
         }
       });
     </script>
-
+    <script>
+        AFRAME.registerComponent
+    </script>
 <link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://startbootstrap.com/templates/agency/font-awesome-4.1.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
@@ -29,7 +31,7 @@
 
   </head>
   <body>
-    <a-scene renderer="gammaOutput: true; colorManagement: true;" joystick vr-mode-ui="enabled: false" stats>
+    <a-scene renderer="gammaOutput: true; colorManagement: true;" joystick vr-mode-ui="enabled: false" >
       <a-assets>
         <a-asset-item id="NetStream_Booth" src="NetStream_Booth_export_gltf/NetStream_Booth.gltf"></a-asset-item>
         <img id="play" src="image/play.png">
