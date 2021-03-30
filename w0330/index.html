@@ -51,7 +51,22 @@
         <a-box color="#212121" position="2.25 0 -9" scale="2 1 0.1" hoverable class="UIButton"
             event-set__enter="_event: hover-start; color: #00AAFF" event-set__leave="_event: hover-end; color: #212121"
             event-set__tarcol="_event: click; _target: #screen; color: #00AAFF"></a-box>
+
+            <a-entity oculus-touch-controls="hand: left" thumbstick-logging></a-entity>
+            <a-entity oculus-touch-controls="hand: right" thumbstick-logging></a-entity>
+            <script>
+            AFRAME.registerComponent('thumbstick-logging',{
+              init: function () {
+                this.el.addEventListener('thumbstickmoved', this.logThumbstick);
+              },
+              logThumbstick: function (evt) {
+                if (evt.detail.y > 0.95) { console.log("DOWN"); }
+                if (evt.detail.y < -0.95) { console.log("UP"); }
+                if (evt.detail.x < -0.95) { console.log("LEFT"); }
+                if (evt.detail.x > 0.95) { console.log("RIGHT"); }
+              }
+            });
+            </script>
     </a-scene>
 </body>
-
 </html>
