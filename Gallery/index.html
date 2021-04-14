@@ -24,11 +24,13 @@
       <img id="play" src="image/play.png">
       <img id="pause" src="image/pause.png">
       <video id="netStream" src="image/NetStream.mp4" loop="true"></video>
+      <audio id="bgm" src="bgm.mp3" preload="auto"></audio>
     </a-assets>
 
     <!-- CAMERA -->
     <a-entity id="rig" movement-controls="fly: true; speed: 0.5; constrainToNavMesh: true;">
       <a-entity camera look-controls position="0 1.6 0">
+        <!-- <a-sound src="bgm.mp3" autoplay="true" loop="true" volume="0.3"></a-sound> -->
         <a-sound src="bgm.mp3" autoplay="true" loop="true" volume="0.3"></a-sound>
       </a-entity>
       
