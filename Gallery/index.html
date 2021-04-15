@@ -12,8 +12,87 @@
   <script src="//cdn.jsdelivr.net/gh/donmccurdy/aframe-physics-system@v3.2.0/dist/aframe-physics-system.min.js">
   </script>
   <script src="video.js"></script>
-  <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js">
+  </script>
+  <script>
+    AFRAME.registerComponent('change-color-on-click', {
+      // Could use a schem to preserve the color! then simply change it on update
+      // if clicked?
+      init: function () {
+        var COLORS = [
+          'pink',
+          'blue',
+          'yellow',
+          'red',
+          'peachpuff',
+          '#2EAFAC',
+          '#BAE'
+        ];
+        this.el.addEventListener('click', function (evt) {
+          var randomIndex = Math.floor(Math.random() * COLORS.length);
+          var newColor = COLORS[randomIndex];
+          this.setAttribute('material', 'color', newColor);
+          console.log('I was clicked at: ', evt.detail.intersection.point,
+            "and my new color is: ",
+            newColor);
+        });
+      }
+    });
+  </script>
 
+  <script>
+    AFRAME.registerComponent('random-position', {
+      init: function () {
+        var ranPosition = [
+          '0 0.5 0',
+          '1 1 0',
+          '-1 1 0',
+          '-1 0.5 1'
+        ];
+
+        this.el.addEventListener('click', function (evt) {
+          var randomIndex = Math.floor(Math.random() * ranPosition.length);
+          var newPos = ranPosition[randomIndex];
+          this.setAttribute('position', newPos);
+        });
+      }
+    });
+  </script>
+
+  <script>
+    AFRAME.registerComponent('visibility', {
+      init: function () {
+        var flag = false;
+        var entity = document.getElementById('Int_');
+
+        this.el.addEventListener('click', function (evt) {
+          entity.setAttribute('visible', flag);
+          flag = !flag;
+        });
+      }
+    });
+  </script>
+
+  <script>
+    AFRAME.registerComponent('align-center', {
+      init: function () {
+        setTimeout((e) => {
+          let mesh = this.el.getObject3D('mesh');
+          var box = new THREE.BoxHelper(mesh, 0x00ff00);
+          var bbox = new THREE.Box3().setFromObject(box);
+          var bbox2 = new THREE.Box3().setFromObject(mesh);
+
+          var xScale = this.el.getAttribute("scale").x
+          mesh.position.set((bbox.getSize().x / xScale) / -2, 0, 0)
+
+          //var box2 = new THREE.BoxHelper(this.el.object3D, 0xffff00);
+          //this.el.sceneEl.object3D.add(box2);
+          //this.el.sceneEl.object3D.add(box);
+          this.el.emit('go')
+        }, 1000)
+      }
+    })
+  </script>
 </head>
 
 <body>
@@ -29,85 +108,14 @@
       <video id="netStream" src="image/NetStream.mp4" loop="true"></video>
       <audio id="bgm" src="bgm.mp3" preload="auto"></audio>
     </a-assets>
-    <script>
-      AFRAME.registerComponent('change-color-on-click', {
-        // Could use a schem to preserve the color! then simply change it on update
-        // if clicked?
-        init: function () {
-          var COLORS = [
-            'pink',
-            'blue',
-            'yellow',
-            'red',
-            'peachpuff',
-            '#2EAFAC',
-            '#BAE'
-          ];
-          this.el.addEventListener('click', function (evt) {
-            var randomIndex = Math.floor(Math.random() * COLORS.length);
-            var newColor = COLORS[randomIndex];
-            this.setAttribute('material', 'color', newColor);
-            console.log('I was clicked at: ', evt.detail.intersection.point,
-              "and my new color is: ",
-              newColor);
-          });
-        }
-      });
-    </script>
 
-    <script>
-      AFRAME.registerComponent('random-position', {
-        init: function () {
-          var ranPosition = [
-            '0 0.5 0',
-            '1 1 0',
-            '-1 1 0',
-            '-1 0.5 1'
-          ];
-
-          this.el.addEventListener('click', function (evt) {
-            var randomIndex = Math.floor(Math.random() * ranPosition.length);
-            var newPos = ranPosition[randomIndex];
-            this.setAttribute('position', newPos);
-          });
-        }
-      });
-    </script>
-
-    <script>
-      AFRAME.registerComponent('visibility', {
-        init: function () {
-          var flag = false;
-          var entity = document.getElementById('Int_');
-
-          this.el.addEventListener('click', function (evt) {
-            entity.setAttribute('visible', flag);
-            flag = !flag;
-          });
-        }
-      });
-    </script>
-
-    <script>
-      AFRAME.registerComponent('align-center', {
-        init: function () {
-          setTimeout((e) => {
-            let mesh = this.el.getObject3D('mesh');
-            var box = new THREE.BoxHelper(mesh, 0x00ff00);
-            var bbox = new THREE.Box3().setFromObject(box);
-            var bbox2 = new THREE.Box3().setFromObject(mesh);
-
-            var xScale = this.el.getAttribute("scale").x
-            mesh.position.set((bbox.getSize().x / xScale) / -2, 0, 0)
-
-            //var box2 = new THREE.BoxHelper(this.el.object3D, 0xffff00);
-            //this.el.sceneEl.object3D.add(box2);
-            //this.el.sceneEl.object3D.add(box);
-            this.el.emit('go')
-          }, 1000)
-        }
-      })
-    </script>
+    <!-- CAMERA -->
+    <a-entity id="rig" movement-controls="fly: true; speed: 0.5; constrainToNavMesh: true;">
+      <a-entity camera look-controls position="0 1.6 0">
+        <!-- <a-sound src="bgm.mp3" autoplay="true" loop="true" volume="0.3"></a-sound> -->
+        <a-sound src="bgm.mp3" autoplay="true" loop="true" volume="0.3"></a-sound>
+      </a-entity>
+    </a-entity>
 
     <!--click event-->
     <a-entity id="click_event" position="-3 1 3">
@@ -116,14 +124,6 @@
       </a-entity>
       <a-box id="Int_" position="0 .5 0" scale=".8 .8 .8" color="green" change-color-on-click="" random-position>
       </a-box>
-    </a-entity>
-    <!-- CAMERA -->
-    <a-entity id="rig" movement-controls="fly: true; speed: 0.5; constrainToNavMesh: true;">
-      <a-entity camera look-controls position="0 1.6 0">
-        <!-- <a-sound src="bgm.mp3" autoplay="true" loop="true" volume="0.3"></a-sound> -->
-        <a-sound src="bgm.mp3" autoplay="true" loop="true" volume="0.3"></a-sound>
-      </a-entity>
-
     </a-entity>
 
     <!-- STAGE -->
