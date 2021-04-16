@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+
+    <script src="js/aframe-outline.min.js"></script>
+
+</head>
+
+<body>
+    <a-scene renderer="antialias: true; colorManagement: true;" vr-mode-ui="false"
+        device-orientation-permission-ui="enabled: false" cursor="rayOrigin: mouse"
+        fog="type: exponential; color: #00f0ff">
+
+        <a-assets>
+            <img id="cyberpunk" src="img/cyberpunk.jpg">
+
+            <img id="bp1" src="img/blackphanter.jpg">
+            <img id="bp2" src="img/blackphanter2.jpg">
+            <img id="bp3" src="img/blackphanter3.jpg">
+            <img id="tichala" src="img/tichala.jpg">
+            <img id="nikia" src="img/nikia.jpg">
+            <img id="killmonger" src="img/killmonger.jpg">
+
+        </a-assets>
+
+        <!-- <a-sky color="#1b2021"></a-sky> -->
+        <a-sky src="#cyberpunk" material="opacity: .8s"></a-sky>
+        <a-entity geometry="primitive: plane" position="0 -5 0" rotation="-90 0 0" scale="15s 1000 1"></a-entity>
+
+        <a-entity id="frame1" geometry="primitive: plane;" material="src: #bp1" position="0 2 -5" scale="5 7 1"
+            rotation="0 0 0"></a-entity>
+
+        <!--  event-set -->
+        <a-entity id="open1" geometry="primitive: cylinder; segmentsRadial: 6" color="#FFAA00" position="0 -2 -5"
+            scale=".2 .1 .2" rotation="-90 0 0" class="ui" outline="color: red; pulse: true; scale: 1.2"
+            animation__enter="property: material.color; from: #FFAA00; to: #FF7700; startEvents: mouseenter; dur: 250; easing: linear"
+            animation__leave="property: material.color; from: #FF7700; to: #FFAA00; startEvents: mouseleave; dur: 250; easing: linear"
+            event-set__scale="_target: #explain_frame1; _event: click; animation.property: scale; animation.to: 4 6 0.01; animation.easing: easeInOutBack; animation.dur: 1000"
+            event-set__position="_target: #close1; _event: click; animation.property: position; animation.to: 5 -.8 -5; animation.dur: 1000">
+        </a-entity>
+
+        <a-entity id="explain_frame1" position="5 2.5 -5" scale="0 0 0">
+            <a-image src="#tichala" scale="1 1 1" event-set__enter="_event: mouseenter; text.color: #FF0000"
+                event-set__leave="_event: mouseleave; text.color: #212121"></a-image>
+        </a-entity>
+
+        <!-- Reset/Close -->
+        <a-plane id="close1" look-at="#cam" color="#ff0000" position="0 3 -5.5" scale=".4 .4 .4" class="ui"
+            animation__enter="property: material.color; from: #ff0000; to: #FFff00; startEvents: mouseenter; dur: 250; easing: linear"
+            animation__leave="property: material.color; from: #FFff00; to: #ff0000; startEvents: mouseleave; dur: 250; easing: linear"
+            event-set__scale="_target: #explain_frame1; _event: click; animation.to: 0 0 0; animation.easing: easeOutExpo; animation.dur: 1500"
+            event-set__position="_event: click; animation.to: 0 3 -5.5; animation.dur: 250">
+        </a-plane>
+
+
+        <!-- 2222222222222222222222222222222222222222222-->
+
+        <a-entity id="frame2" geometry="primitive: plane;" material="src: #bp2" position="-15 2 -5" scale="5 7 1"
+            rotation="0 0 0" ></a-entity>
+
+        <!--  event-set -->
+        <a-entity id="open2" geometry="primitive: cylinder; segmentsRadial: 6" color="#FFAA00" position="-15 -2 -5"
+            scale=".2 .1 .2" rotation="-90 0 0" class="ui" outline="color: red; pulse: true; scale: 1.2"
+            animation__enter="property: material.color; from: #FFAA00; to: #FF7700; startEvents: mouseenter; dur: 250; easing: linear"
+            animation__leave="property: material.color; from: #FF7700; to: #FFAA00; startEvents: mouseleave; dur: 250; easing: linear"
+            event-set__scale="_target: #explain_frame2; _event: click; animation.property: scale; animation.to: 4 6 0.01; animation.easing: easeInOutBack; animation.dur: 1000"
+            event-set__position="_target: #close2; _event: click; animation.property: position; animation.to: -10 -.8 -5; animation.dur: 1000">
+        </a-entity>
+
+        <a-entity id="explain_frame2" position="-10 2.5 -5" scale="0 0 0">
+            <a-image src="#nikia" scale="1 1 1" event-set__enter="_event: mouseenter; text.color: #FF0000"
+                event-set__leave="_event: mouseleave; text.color: #212121"></a-image>
+        </a-entity>
+
+        <!-- Reset/Close -->
+        <a-plane id="close2" look-at="#cam" color="#ff0000" position="-15 3 -5.5" scale=".4 .4 .4" class="ui"
+            animation__enter="property: material.color; from: #ff0000; to: #FFff00; startEvents: mouseenter; dur: 250; easing: linear"
+            animation__leave="property: material.color; from: #FFff00; to: #ff0000; startEvents: mouseleave; dur: 250; easing: linear"
+            event-set__scale="_target: #explain_frame2; _event: click; animation.to: 0 0 0; animation.easing: easeOutExpo; animation.dur: 1500"
+            event-set__position="_event: click; animation.to: -15 3 -5.5; animation.dur: 250">
+        </a-plane>
+
+
+        <!-- 33333333333333333333333333333333333333333-->
+
+        <a-entity id="frame3" geometry="primitive: plane;" material="src: #bp3" position="15 2 -5" scale="5 7 1"
+            rotation="0 0 0" ></a-entity>
+
+        <!--  event-set -->
+        <a-entity id="open3" geometry="primitive: cylinder; segmentsRadial: 6" color="#FFAA00" position="15 -2 -5"
+            scale=".2 .1 .2" rotation="-90 0 0" class="ui" outline="color: red; pulse: true; scale: 1.2"
+            animation__enter="property: material.color; from: #FFAA00; to: #FF7700; startEvents: mouseenter; dur: 250; easing: linear"
+            animation__leave="property: material.color; from: #FF7700; to: #FFAA00; startEvents: mouseleave; dur: 250; easing: linear"
+            event-set__scale="_target: #explain_frame3; _event: click; animation.property: scale; animation.to: 4 6 0.01; animation.easing: easeInOutBack; animation.dur: 1000"
+            event-set__position="_target: #close3; _event: click; animation.property: position; animation.to: 20 -.8 -5; animation.dur: 1000">
+        </a-entity>
+
+        <a-entity id="explain_frame3" position="20 2.5 -5" scale="0 0 0">
+            <a-image src="#killmonger" scale="1 1 1" event-set__enter="_event: mouseenter; text.color: #FF0000"
+                event-set__leave="_event: mouseleave; text.color: #212121"></a-image>
+        </a-entity>
+
+        <!-- Reset/Close -->
+        <a-plane id="close3" look-at="#cam" color="#ff0000" position="15 3 -5.5" scale=".4 .4 .4" class="ui"
+            animation__enter="property: material.color; from: #ff0000; to: #FFff00; startEvents: mouseenter; dur: 250; easing: linear"
+            animation__leave="property: material.color; from: #FFff00; to: #ff0000; startEvents: mouseleave; dur: 250; easing: linear"
+            event-set__scale="_target: #explain_frame3; _event: click; animation.to: 0 0 0; animation.easing: easeOutExpo; animation.dur: 1500"
+            event-set__position="_event: click; animation.to: 15 3 -5.5; animation.dur: 250">
+        </a-plane>
+        
+        <!-- Camera Rig -->
+        <a-entity position="0 0 30" rotation="0 0 0" movement-controls="speed: 0.6">
+            <a-camera id="cam" position="0 1.6 0" look-controls wasd-controls="acceleration: 50; easing: 40">
+            </a-camera>
+        </a-entity>
+    </a-scene>
+</body>
+
+</html>
